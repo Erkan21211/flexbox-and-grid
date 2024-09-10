@@ -4,11 +4,18 @@
     scroll-behavior: smooth;
 }
 
+body {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
 .container {
     display: flex;
-    height: 40.35555vmax;
+    height: 100%;
     margin: 10px 10px 10px 10px;
 
+    flex-grow: 1;
     gap: 25px;
     flex-direction: row;
     justify-content: space-around;
@@ -18,20 +25,31 @@
 
 .sidebar-l {
     width: 280px;
-    height: 745px;
+    /* height: 100%; */
     background-color: skyblue;
     padding: 10px 10px 10px 10px;
 
     display: flex;
     flex-direction: column;
-    flex-grow: 1;
-    align-self: flex-start;
+    flex-grow: 0.1;
     
+}
+
+.sidebar-r {
+    width: 280px;
+    /* height: 100%; */
+    background-color: grey;
+    padding: 15px 15px 15px 15px;
+
+    display: flex;
+    flex-direction: column;
+
+    flex-grow: 0.1;
 }
 
 .content {
     width: 280px;
-    height: 745px;
+    /* height: 745px; */
     background-color: skyblue;
 
     display: flex;
@@ -49,17 +67,6 @@
     font-size: 40px;
 }
 
-.sidebar-r {
-    width: 280px;
-    height: 745px;
-    background-color: grey;
-    padding: 10px 10px 10px 10px;
-
-    display: flex;
-    flex-direction: column;
-
-    flex-grow: 2;
-}
 
 header {
     background-color: purple;
@@ -85,6 +92,10 @@ header {
 a {
     list-style: none;
     text-decoration: none;
+}
+
+ul {
+    padding: 20px;
 }
 
 footer {
