@@ -8,14 +8,14 @@
     <title>Webpage Grid Layout</title>
     <link rel="stylesheet" href="css/myStyle.css" />
     <link rel="icon" href="favicon.ico" type="" />
-    <base href="localhost:5858" />
+    <!-- <base href="localhost:5858" /> -->
   </head>
   <body>
     <header>
       <div class="icon">&#10003;</div>
       <nav>
         <div class="menu">
-          <a href="index.html">Home</a>
+          <a id="menu-home-text" href="index.html">Home</a>
           <a href="about-me.html">About</a>
           <a href="contact.html">Contact</a>
         </div>
@@ -31,7 +31,7 @@
         </ul>
       </div>
       <div class="content">
-        <h1 id="menu-text">Landing Page(Flexbox Grid)</h1>
+        <h1 id="contentText">Landing Page(Flexbox Grid)</h1>
         <p>Hier vertellen wat er nu speelt/veranderd is.</p>
         <p>
           House hen chinchillas in barn livestock cat hogs chicks trucks. Blue
@@ -41,6 +41,10 @@
           plow basil swather, cat weathervane grain trucks, hoot pony robins
           peacocks an kale. In eggplant, quonset is grain bins,+ grain truck.
         </p>
+        <h1>De datum van vandaag:</h1>
+        <p id="datum"></p>
+
+        <p id="oppervlakteText"></p>
       </div>
       <div class="sidebar-r">
         <h2>Geleerd</h2>
@@ -73,8 +77,9 @@
       <div class="breadcrumbs">Home</div>
       <div>Email: info@example.com</div>
     </footer>
+    <script src="./scripts/main.js"></script>
   </body>
-</html>
+</html> 
 <!--
     Intro 2024:
     Lucas - Pizza Hawai
