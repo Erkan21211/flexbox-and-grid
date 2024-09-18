@@ -17,12 +17,16 @@ console.log("Dit is een pagina");
 const currentDate = new Date().toDateString();
 let contentText = document.getElementById("contentText");
 let menuhomeText = document.getElementById("menu-home-text");
+let headerBar = document.getElementById("header");
 
 
 // pagina text aanpassen
 document.getElementById("datum").innerText = currentDate;
 contentText.innerText = "Mijn pagina";
 menuhomeText.innerText = "Thuis";
+
+headerBar.style.color = "green"; // icon kleur
+headerBar.style.backgroundColor = "black"; // achtergrond kleur
 
 // datatypes
 let number = 100;
@@ -134,18 +138,21 @@ checkKleurOppervlakte();
 
 let array1 = [1, 2, 3, 4, 10];
 
+// string join operation
 function methode1(array1) {
     let text = array1.toString();
-    console.log(text);
+    return console.log(text);
 }
 
-// methode1(array1);
-
-
-
-// join 
+// join operation string
 function methode2(array1) {
     return console.log(array1.join(""));
 }
 methode1(array1);
-methode2(array1)
+methode2(array1);
+
+
+// een eendimensionale array omzet
+for (let i = 0; i < array1.length; i++) {
+    console.log(array1[i]);
+}
