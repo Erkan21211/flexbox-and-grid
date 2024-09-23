@@ -1,3 +1,9 @@
+// Author: Erkan Aslantas
+
+// use strict mode is een manier om fouten te voorkomen in javascript code.
+// bron: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Strict_mode
+"use strict";
+
 // javascript vraag opdracht:
 // Wat is het verschil tussen een looselytyped languageen een strong typedlanguage?
 // antwoord: bij looselytyped kan variables veranderen van type en bij strong typed niet.
@@ -8,17 +14,13 @@
 // onderzoek:
 // ik heb onderzocht hoe ik de datum kan laten zien aan de gebruiker. bron: https://www.shecodes.io/athena/6172-how-to-get-current-date-in-javascript#:~:text=You%20can%20use%20the%20Date,use%20the%20toDateString()%20method.
 
-
-
 console.log("Dit is een pagina");
 
-
-// variables 
+// variables
 const currentDate = new Date().toDateString();
 let contentText = document.getElementById("contentText");
 let menuhomeText = document.getElementById("menu-home-text");
 let headerBar = document.getElementById("header");
-
 
 // pagina text aanpassen
 document.getElementById("datum").innerText = currentDate;
@@ -34,101 +36,95 @@ let color = "Red";
 let isRed = true;
 // objects
 const persoon = {
-    voornaam: "Erkan",
-    achternaam: "Aslantas"
-}
+  voornaam: "Erkan",
+  achternaam: "Aslantas",
+};
 // Array list
-const autos = ['BMW', "VOLVO", "NISSAN"];
-const datum = new Date("2024-9-17")
+const autos = ["BMW", "VOLVO", "NISSAN"];
+const datum = new Date("2024-9-17");
 
-const sportLijst = ["voetbal", "hockey", "tennis"]
+const sportLijst = ["voetbal", "hockey", "tennis"];
 
 const modules = {
-    onderzoeksvaardigheden: "Jan Zuur, Ron van Zuilichem",
-    professionalskills: "Arie Ismaiel, Wout de Folter",
-    webdevelopment: "Stephan Hoeksema"
-}
-
+  onderzoeksvaardigheden: "Jan Zuur, Ron van Zuilichem",
+  professionalskills: "Arie Ismaiel, Wout de Folter",
+  webdevelopment: "Stephan Hoeksema",
+};
 
 // if else statements sport edition
 
-if(sportLijst.includes("voetbal")) {
-    console.log("dat is een leuke sport")
+if (sportLijst.includes("voetbal")) {
+  console.log("dat is een leuke sport");
 } else {
-    console.log("minder leuke sport");
+  console.log("minder leuke sport");
 }
 
-
 // switch methode van if statement
-switch(modules) {
-    case modules.onderzoeksvaardigheden:
-        console.log("leuk vak!");
-    case modules.professionalskills:
-        console.log("goed vak!");
-    case modules.webdevelopment:
-        console.log("web development is leuke vak")
-    default:
-        console.log("dit vak herken ik niet")
+switch (modules) {
+  case modules.onderzoeksvaardigheden:
+    console.log("leuk vak!");
+  case modules.professionalskills:
+    console.log("goed vak!");
+  case modules.webdevelopment:
+    console.log("web development is leuke vak");
+  default:
+    console.log("dit vak herken ik niet");
 }
 
 let studentengegevens = [
-    { naam: "Erkan", cijfers: { NL: 8, ENG: 8, webdev: 10 } },
-    { naam: "Anna", cijfers: { NL: 2, ENG: 8, webdev: 6 } },
-    { naam: "Mike", cijfers: { NL: 5, ENG: 8, webdev: 10 } },
-    { naam: "Eric", cijfers: { NL: 8, ENG: 8, webdev: 5 } },
-    { naam: "Jos", cijfers: { NL: 4, ENG: 5, webdev: 10 } }
+  { naam: "Erkan", cijfers: { NL: 8, ENG: 8, webdev: 10 } },
+  { naam: "Anna", cijfers: { NL: 2, ENG: 8, webdev: 6 } },
+  { naam: "Mike", cijfers: { NL: 5, ENG: 8, webdev: 10 } },
+  { naam: "Eric", cijfers: { NL: 8, ENG: 8, webdev: 5 } },
+  { naam: "Jos", cijfers: { NL: 4, ENG: 5, webdev: 10 } },
 ];
 
 for (const student of studentengegevens) {
-    console.log("Naam: " + student.naam);
-    console.log("Cijfers: " + JSON.stringify(student.cijfers));
-    console.log("gemiddelde cijfer opdracht:");
-    
+  console.log("Naam: " + student.naam);
+  console.log("Cijfers: " + JSON.stringify(student.cijfers));
+  console.log("gemiddelde cijfer opdracht:");
 
-    // gemiddelde opdracht
-    let cijfers = Object.values(student.cijfers); // Haal alle cijfers op
-    let totaal = cijfers.reduce((acc, cijfer) => acc + cijfer, 0); // Bereken de som van de cijfers
-    let gemiddelde = totaal / cijfers.length; // Bereken het gemiddelde
+  // gemiddelde opdracht
+  let cijfers = Object.values(student.cijfers); // Haal alle cijfers op
+  let totaal = cijfers.reduce((acc, cijfer) => acc + cijfer, 0); // Bereken de som van de cijfers
+  let gemiddelde = totaal / cijfers.length; // Bereken het gemiddelde
 
-    console.log("Naam: " + student.naam);
-    console.log("Gemiddelde cijfer: " + gemiddelde.toFixed(2));
+  console.log("Naam: " + student.naam);
+  console.log("Gemiddelde cijfer: " + gemiddelde.toFixed(2));
 
-
-    // hoogste gemiddelde
-    console.log("Naam: " + student.naam);
-    console.log("Gemiddelde cijfer: " + gemiddelde.toFixed(2));
-    console.log("hoogste gemiddelde:" + Math.max(gemiddelde));
-    console.log("vakken:" + modules.onderzoeksvaardigheden);
-    console.log("vakken:" + modules.professionalskills);
-    console.log("vakken:" + modules.webdevelopment);
+  // hoogste gemiddelde
+  console.log("Naam: " + student.naam);
+  console.log("Gemiddelde cijfer: " + gemiddelde.toFixed(2));
+  console.log("hoogste gemiddelde:" + Math.max(gemiddelde));
+  console.log("vakken:" + modules.onderzoeksvaardigheden);
+  console.log("vakken:" + modules.professionalskills);
+  console.log("vakken:" + modules.webdevelopment);
 }
-
 
 // functies
 
-let elementoppervlakte = document.getElementById('oppervlakteText');
-let oppervlakteNumber = document.getElementById('oppervlakteText').value;
+let elementoppervlakte = document.getElementById("oppervlakteText");
+let oppervlakteNumber = document.getElementById("oppervlakteText").value;
 
 function berekenOppervlakte(breedte, hoogte) {
-    
-    console.log(breedte + "x" + hoogte);
-    return breedte * hoogte;
+  console.log(breedte + "x" + hoogte);
+  return breedte * hoogte;
 }
 
 let oppervlakte = berekenOppervlakte(5, 10);
 
 function checkKleurOppervlakte() {
-    if(oppervlakte < 50) {
-        elementoppervlakte.style.color = "red";
-        elementoppervlakte.innerText = oppervlakte;
-    } else if (oppervlakte < 100) {
-        elementoppervlakte.style.color = "green";
-        elementoppervlakte.innerText = oppervlakte;
-    } else {
-        elementoppervlakte.style.color = "yellow";
-        elementoppervlakte.innerText = oppervlakte;
-    }
-    console.log(oppervlakte);
+  if (oppervlakte < 50) {
+    elementoppervlakte.style.color = "red";
+    elementoppervlakte.innerText = oppervlakte;
+  } else if (oppervlakte < 100) {
+    elementoppervlakte.style.color = "green";
+    elementoppervlakte.innerText = oppervlakte;
+  } else {
+    elementoppervlakte.style.color = "yellow";
+    elementoppervlakte.innerText = oppervlakte;
+  }
+  console.log(oppervlakte);
 }
 
 checkKleurOppervlakte();
@@ -140,19 +136,38 @@ let array1 = [1, 2, 3, 4, 10];
 
 // string join operation
 function methode1(array1) {
-    let text = array1.toString();
-    return console.log(text);
+  let text = array1.toString();
+  return console.log(text);
 }
 
 // join operation string
 function methode2(array1) {
-    return console.log(array1.join(""));
+  return console.log(array1.join(""));
 }
 methode1(array1);
 methode2(array1);
 
-
-// een eendimensionale array omzet
+// een eendimensionale array omzetten in een string met een for loop
 for (let i = 0; i < array1.length; i++) {
-    console.log(array1[i]);
+  console.log(array1[i]);
 }
+
+// behandeld met Jan Zuur
+// een functie die een start en een eindwaarde accepteert en een optionele boodschap.
+function piet(start, end, message = "piet") {
+  for (let x = start; x < end; x++) {
+    let pietFunctie = document.getElementById("pietFunctie");
+    pietFunctie.style.color = "red";
+    pietFunctie.style.fontSize = "20px";
+    pietFunctie.style.fontWeight = "bold";
+
+
+    pietFunctie.innerText = "";
+
+    for (let x = start; x < end; x++) {
+      pietFunctie.innerText += message + " " + x + "\n"; // Tekst toevoegen en een nieuwe regel
+    }
+  }
+}
+
+piet(0, 10);
